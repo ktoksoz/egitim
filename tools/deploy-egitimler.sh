@@ -28,7 +28,9 @@ elif [ -n "$1" ] && [[ "$1" == *@* ]]; then HOST="$1"; shift; fi
 SECILEN=" $* "
 
 if [ -z "$YEREL" ]; then
-  ssh "$HOST" 'test -d ~/egitim.koraytoksoz.com' || {
+  DURUM=$(ssh "$HOST" 'test -d ~/egitim.koraytoksoz.com && echo var || echo yok') || {
+    echo "Sunucuya bağlanılamadı ($HOST). SSH anahtarını / ajanını kontrol edin."; exit 1; }
+  [ "$DURUM" = var ] || {
     echo "Sunucuda ~/egitim.koraytoksoz.com yok. DreamHost panelinde egitim.koraytoksoz.com'u Fully Hosted + ücretsiz HTTPS olarak ekleyin."; exit 1; }
 fi
 
