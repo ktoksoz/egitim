@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- Paylaşım görseli (img/og.jpg, 1200×630) için şablon. Kapaklar img/kapak/ altından gelir.
+     Üretmek: NODE_PATH=... node tools/og.js <port>   (sunucu bu deponun kökünü sunmalı) -->
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #f2f3f5; color: #17202b; font-family: "Newsreader", serif; }
+  .ust { position: absolute; left: 56px; top: 40px; right: 56px; display: flex; align-items: baseline; justify-content: space-between; }
+  h1 { margin: 0; font-size: 104px; font-weight: 350; letter-spacing: -.035em; line-height: 1; }
+  p { margin: 0; font-size: 26px; font-style: italic; color: #4f5866; }
+  .izgara { position: absolute; left: 56px; right: 56px; top: 188px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .izgara img { display: block; width: 100%; aspect-ratio: 1440 / 860; object-fit: cover; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <div class="ust"><h1>Eğitimler</h1><p>Hazırlayan: Koray Toksöz</p></div>
+  <div class="izgara">
+    <img src="../img/kapak/yz.jpg" alt=""><img src="../img/kapak/muzik.jpg" alt=""><img src="../img/kapak/sdr.jpg" alt="">
+    <img src="../img/kapak/anten.jpg" alt=""><img src="../img/kapak/elektronik.jpg" alt=""><img src="../img/kapak/felsefe.jpg" alt="">
+  </div>
+</body>
+</html>
