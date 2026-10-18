@@ -55,12 +55,54 @@ a { color: inherit; }
 }
 .yazar { margin: 1.1em 0 0; font-style: italic; color: var(--murekkep); }
 
+/* Kategoriler: üstte atlama bağlantıları, her kategori kendi başlığıyla */
+.kategoriler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 0 0 clamp(36px, 5vw, 56px);
+}
+.kategoriler a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .5em;
+  padding: .3em .95em .35em;
+  border: 1px solid var(--cizgi);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: var(--ikincil);
+}
+.kategoriler a:hover { color: var(--murekkep); border-color: var(--soluk); }
+.kategoriler span { font-size: .85em; color: var(--soluk); font-variant-numeric: lining-nums tabular-nums; }
+.kategori { scroll-margin-top: 24px; }
+.kategori + .kategori { margin-top: clamp(72px, 10vw, 128px); }
+.kategori > h2 {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .2em .8em;
+  margin: 0;
+  padding-bottom: .35em;
+  border-bottom: 1px solid var(--cizgi);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 350;
+  line-height: 1.05;
+  letter-spacing: -.025em;
+}
+.kategori > h2 .sayi {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--soluk);
+}
+
 /* Eğitimler: iki sütun, telefonda tek */
 .egitimler {
   list-style: none;
   margin: 0;
   padding: clamp(28px, 4vw, 48px) 0 0;
-  border-top: 1px solid var(--cizgi);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
   gap: clamp(44px, 6vw, 80px) clamp(28px, 4vw, 56px);
@@ -76,18 +118,18 @@ a { color: inherit; }
 }
 .kapak img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.2, .7, .2, 1); }
 .egitim:hover .kapak img { transform: scale(1.015); }
-.egitim h2 {
+.egitim h3 {
   margin: .9em 0 0;
   font-size: clamp(1.6rem, 2.4vw, 2.05rem);
   font-weight: 450;
   line-height: 1.1;
   letter-spacing: -.015em;
 }
-.egitim h2 a { text-decoration: none; }
-.egitim h2 a::after { content: ""; position: absolute; inset: 0; }
-.egitim:hover h2 a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
-.egitim h2 a:focus-visible { outline: none; }
-.egitim:has(h2 a:focus-visible) .kapak { outline: 2px solid var(--vurgu); outline-offset: 3px; }
+.egitim h3 a { text-decoration: none; }
+.egitim h3 a::after { content: ""; position: absolute; inset: 0; }
+.egitim:hover h3 a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
+.egitim h3 a:focus-visible { outline: none; }
+.egitim:has(h3 a:focus-visible) .kapak { outline: 2px solid var(--vurgu); outline-offset: 3px; }
 .alt { margin: .25em 0 0; font-style: italic; color: var(--ikincil); font-size: 1.1rem; }
 .aciklama { margin: .6em 0 0; max-width: 36em; }
 .olcu {

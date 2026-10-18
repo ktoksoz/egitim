@@ -6,14 +6,32 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const dakika = (sn) => Math.round(sn / 60);
 
-  liste.innerHTML = window.EGITIMLER.map((e) => `
+  const kart = (e) => `
     <li class="egitim">
       <div class="kapak">
         <img src="img/kapak/${esc(e.ad)}.jpg" alt="" width="1440" height="860" loading="lazy" decoding="async">
       </div>
-      <h2><a href="${esc(e.ad)}/">${esc(e.baslik)}</a></h2>
+      <h3><a href="${esc(e.ad)}/">${esc(e.baslik)}</a></h3>
       <p class="alt">${esc(e.alt)}</p>
       <p class="aciklama">${esc(e.aciklama)}</p>
       <p class="olcu"><span>${e.slayt} slayt</span><span>${dakika(e.sure)} dakikalık anlatım</span><a class="kaynak" href="https://github.com/${esc(e.depo)}" target="_blank" rel="noopener">${GH}Kaynak kodu</a></p>
-    </li>`).join("");
+    </li>`;
+
+  // Kategorisi listede olmayan eğitim kaybolmasın: sona "Diğer" başlığıyla eklenir.
+  const kategoriler = (window.KATEGORILER || []).slice();
+  const bilinen = new Set(kategoriler.map((k) => k.ad));
+  if (window.EGITIMLER.some((e) => !bilinen.has(e.kategori))) kategoriler.push({ ad: "diger", baslik: "Diğer" });
+  const gruplar = kategoriler
+    .map((k) => ({ k, egitimler: window.EGITIMLER.filter((e) => (bilinen.has(e.kategori) ? e.kategori : "diger") === k.ad) }))
+    .filter((g) => g.egitimler.length);
+
+  const nav = gruplar.length > 1 ? `
+    <nav class="kategoriler" aria-label="Kategoriler">${gruplar.map((g) => `<a href="#${esc(g.k.ad)}">${esc(g.k.baslik)}<span>${g.egitimler.length}</span></a>`).join("")}</nav>` : "";
+
+  liste.innerHTML = nav + gruplar.map((g) => `
+    <section class="kategori" id="${esc(g.k.ad)}" aria-labelledby="k-${esc(g.k.ad)}">
+      <h2 id="k-${esc(g.k.ad)}">${esc(g.k.baslik)}<span class="sayi">${g.egitimler.length} eğitim</span></h2>
+      <ul class="egitimler">${g.egitimler.map(kart).join("")}
+      </ul>
+    </section>`).join("");
 })();
