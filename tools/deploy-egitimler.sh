@@ -15,6 +15,7 @@ KOK="$(cd .. && pwd)"
 EGITIMLER=(
   yz:yz_whatis
   muzik:music_theory
+  klarnet:klarnet
   sdr:sdr
   anten:anten
   elektronik:elektronik

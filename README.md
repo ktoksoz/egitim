@@ -18,6 +18,7 @@ Her eğitim ayrı bir projedir: kendi deposu, kendi yerel klasörü ve kendi yay
 | [/anten/](https://egitim.koraytoksoz.com/anten/) | Kablodan Boşluğa | Antenler, iletim hatları ve empedans | [anten-iletim-hatti](https://github.com/ktoksoz/anten-iletim-hatti) |
 | [/elektronik/](https://egitim.koraytoksoz.com/elektronik/) | Elektrondan Bilgisayara | Elektronik ve bilgisayarın temelleri | [elektrondan-bilgisayara](https://github.com/ktoksoz/elektrondan-bilgisayara) |
 | [/felsefe/](https://egitim.koraytoksoz.com/felsefe/) | Bilgelik Sevgisi | Felsefe tarihi ve büyük sorular | [felsefe](https://github.com/ktoksoz/felsefe) |
+| [/klarnet/](https://egitim.koraytoksoz.com/klarnet/) | Nefesten Taksime | Türk müziğinde Sol klarnet | [nefesten-taksime](https://github.com/ktoksoz/nefesten-taksime) |
 
 Eski alt alan adları (yz.koraytoksoz.com vb.) bu adreslere yönlendirilir.
 
