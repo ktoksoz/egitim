@@ -20,6 +20,7 @@ EGITIMLER=(
   anten:anten
   elektronik:elektronik
   felsefe:felsefe
+  san:san
 )
 
 YEREL=""
