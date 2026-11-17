@@ -14,7 +14,7 @@
       <h3><a href="${esc(e.ad)}/">${esc(e.baslik)}</a></h3>
       <p class="alt">${esc(e.alt)}</p>
       <p class="aciklama">${esc(e.aciklama)}</p>
-      <p class="olcu"><span>${e.slayt} slayt</span><span>${dakika(e.sure)} dakikalık anlatım</span><a class="kaynak" href="https://github.com/${esc(e.depo)}" target="_blank" rel="noopener">${GH}Kaynak kodu</a></p>
+      <p class="olcu"><span>${e.slayt} slayt</span>${e.sure ? `<span>${dakika(e.sure)} dakikalık anlatım</span>` : ""}<a class="kaynak" href="https://github.com/${esc(e.depo)}" target="_blank" rel="noopener">${GH}Kaynak kodu</a></p>
     </li>`;
 
   // Kategorisi listede olmayan eğitim kaybolmasın: sona "Diğer" başlığıyla eklenir.

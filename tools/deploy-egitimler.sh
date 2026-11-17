@@ -21,6 +21,7 @@ EGITIMLER=(
   elektronik:elektronik
   felsefe:felsefe
   san:san
+  mors:mors
 )
 
 YEREL=""

@@ -19,6 +19,7 @@ Her eğitim ayrı bir projedir: kendi deposu, kendi yerel klasörü ve kendi yay
 | [/elektronik/](https://egitim.koraytoksoz.com/elektronik/) | Elektrondan Bilgisayara | Elektronik ve bilgisayarın temelleri | [elektrondan-bilgisayara](https://github.com/ktoksoz/elektrondan-bilgisayara) |
 | [/felsefe/](https://egitim.koraytoksoz.com/felsefe/) | Bilgelik Sevgisi | Felsefe tarihi ve büyük sorular | [felsefe](https://github.com/ktoksoz/felsefe) |
 | [/klarnet/](https://egitim.koraytoksoz.com/klarnet/) | Nefesten Taksime | Türk müziğinde Sol klarnet | [nefesten-taksime](https://github.com/ktoksoz/nefesten-taksime) |
+| [/mors/](https://egitim.koraytoksoz.com/mors/) | Sinyalden Sohbete | Mors alfabesini kulakla öğrenmek | [sinyalden-sohbete](https://github.com/ktoksoz/sinyalden-sohbete) |
 
 Eski alt alan adları (yz.koraytoksoz.com vb.) bu adreslere yönlendirilir.
 
